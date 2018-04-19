@@ -5,6 +5,8 @@ linyk3 个人主页
 - [ ] shenglong 主页
 - [ ] Unix 网络编程 卷一
 - [ ] Jblog 个人完善
+- [ ] 学习 Spring boot
+- [ ] 学习 Redis
 - [x] 班车应用后台
 ## GIVEUP
 - [x] APUE
