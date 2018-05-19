@@ -2,7 +2,10 @@ linyk3 个人主页
 
 # 2018-04-01 ~ 2018-04-30
 ## TODO
-- [ ] [Think in Java](./ThinkInJava.md)
+- [ ] [Think in Java](./ThinkInJava.md) 
+  - [x] 第一章 对象导论
+  - [x] 第二章 一切皆对象
+  - [ ]
 - [ ] shenglong 主页
   - [x] 整合到spring boot blog 框架 
   - [ ] 静态页面展示
