@@ -12,7 +12,7 @@ linyk3 个人主页
   - [ ] 咨询信息邮件通知
   - [ ] 个人文章动态发布
 - [ ] 学习 Spring boot
-- [ ] 学习 Redis
+- [ ] [学习 Redis](./imooc/Redis/Redis入门.md)
 - [x] 班车应用后台
 ## GIVEUP
 - [x] APUE
