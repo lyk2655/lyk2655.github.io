@@ -214,13 +214,20 @@ Key 定义注意点：
 常用命令 
 - 两端添加
 `127.0.0.1:6379>lpush mylist a b c`
+`127.0.0.1:6379>rpush mylist d e f`
 
 - 查看列表
+`127.0.0.1:6379>lrange mylist 0 5`
+`127.0.0.1:6379>lrange mylist 0 -2`
 - 两端弹出
+`127.0.0.1:6379>lpop mylist`
+`127.0.0.1:6379>rpop mylist`
 - 获取列表元素个数
+`127.0.0.1:6379>llen mylist`
 - 扩展命令
-
-
+`127.0.0.1:6379>lpushx mylist m   //mylist 存在时，在左边插入m。 mylist 不存在，不插入`
+`127.0.0.1:6379>rpushx mylist n`
+`127.0.0.1:6379>lrem mylist `
 ### Redis 通用命令
  
  
