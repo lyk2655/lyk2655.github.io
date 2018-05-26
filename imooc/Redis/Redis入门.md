@@ -40,7 +40,7 @@ NoSql 数据库四大分类
  - 引用排行榜
  - 分布式集群架构中的session分离
  
-### Redis 安装
+### 3. Redis 安装
 
  - `sudo tar -zxvf redis-3.2.6.tar.gz`
  - `tar -zxvf redis-3.2.6.tar.gz`
@@ -71,7 +71,7 @@ NoSql 数据库四大分类
  127.0.0.1:6379>keys *
  ```
  
- ### Jedis 入门
+ ### 4. Jedis 入门
  Jedis 是Redis 官方首选的Java客户端开发包
  在项目中引入jedis包
  ```
@@ -147,7 +147,7 @@ public class JedisTest {
 }
 ```
  
-### Redis 数据结构
+### 5. Redis 数据结构
 五种数据类型：
  1. 字符串 String
  2. 哈希 hash
@@ -185,7 +185,7 @@ Key 定义注意点：
 
 #### Hash 类型
  - String Key 和 String Value 的map容器
- - 每个哈希可以存储429496725个键值对
+ - 每个哈希可以存储 429496725 个键值对
  
 常用命令
 - 赋值
@@ -228,11 +228,142 @@ Key 定义注意点：
 `127.0.0.1:6379>lpushx mylist m   //mylist 存在时，在左边插入m。 mylist 不存在，不插入`
 `127.0.0.1:6379>rpushx mylist n`
 `127.0.0.1:6379>lrem mylist `
-### Redis 通用命令
+`127.0.0.1:6379>lrange mylist 0 -1` //
+`127.0.0.1:6379>linsert mylist after b 11` //在list的元素b之前插入11
+`127.0.0.1:6379>rpoplpush mylist1 mylist2` //从mylist1右边pop出来，push进去mylist2
+
+应用场景：消息队列
+
+#### Set 存储
+ - Set 在集合中不允许出现重复的元素。
+ - Set 包含最大的元素个数：429496725
+ 
+常用命令
+`127.0.0.1:6379>sadd myset a b c`
+`127.0.0.1:6379>srem myset 1`
+`127.0.0.1:6379>smembers myset`  //查看set元素
+`127.0.0.1:6379>scard myset` //查询set元素数量
+`127.0.0.1:6379>sismembers myset a` //判断a是否set中元素
+`127.0.0.1:6379>sdiff myset1 myset2` //差集 myset1 - myset2
+`127.0.0.1:6379>sinter myset1 myset2` //交集 
+`127.0.0.1:6379>sunion myset1 myset2` //并集
+`127.0.0.1:6379>srandmember myset` //随机返回myset中的某元素
+`127.0.0.1:6379>sdiffstore myset1 myset2 myset3` //myset1和myset2的差集的结果存储在myset3里
+`127.0.0.1:6379>sinterstore myset1 myset2 myset3` //myset1和myset2的交集并把结果放到myset3里
+
+应用场景：
+1. 跟踪一些唯一数据，例如客户IP 唯一存储来判断是否注册
+2. 用于维护数据对象之间的关联关系，例如购买A产品的客户set1， 和购买B产品的客户set2，那么同时购买A和B的客户就是set1和set2的并集。
+
+#### Sorted-Set 存储
+Sorted-Set 每个元素都有一个分数，按分数排列，位置有序。
+
+
+常用命令：
+`127.0.0.1:6379>zadd mysort 70 A 80 B  90 C` //在mysort里存储A元素（分数是70），B元素(分数80)，C元素(分数90)
+`127.0.0.1:6379>zadd mysort 50 A` //A元素存在，修改分数为50. 若不存在，直接插入
+`127.0.0.1:6379>zscore mysort A` //查看A元素的分数
+`127.0.0.1:6379>zcard mysort`  //查看mysort的元素个数
+`127.0.0.1:6379>zrem mysort A` //删除mysort中A元素
+`127.0.0.1:6379>zrange mysort 0 -1` //范围查找元素
+`127.0.0.1:6379>zrange mysort 0 -1 withscores` //范围查找元素以及分数(从小到大排序)
+`127.0.0.1:6379>zrevrange mysort 0 -1 withscores` //范围查找元素以及分数(从大到小排序)
+`127.0.0.1:6379>zremrangebyrank mysort 0 4` //按范围查找并将他们删除
+`127.0.0.1:6379>zremrangebyscores mysort 80 100`//按分数范围查找并将他们删除
+`127.0.0.1:6379>zrangebyscore mysort 0 100 withscores limit 0 2` //按分数查找0-100的，并将他们分数显示出来，且只显示0-2共两个
+`127.0.0.1:6379>zcount mysort 80 90` //查看mysort中80分 和 90分的数量
+
+应用场景：游戏排名，微博话题排名，大型在线游戏积分排行榜， 构建索引数据
+
+
+
+
+### 6. Keys的通用操作
+
+#### 通用命令
+`127.0.0.1:6379>keys *` //查看所有的key
+`127.0.0.1:6379>del key1 key2` //删除key1， key2
+`127.0.0.1:6379>exists key1` //查看key1是否存在
+`127.0.0.1:6379>get key1` //获取key1对应的value1
+`127.0.0.1:6379>rename key1 key2`//将key1重命名为key2
+`127.0.0.1:6379>expire key1 1000` //设置key1过期，时间是1000秒
+`127.0.0.1:6379>ttl key1` //查看key1的到期时间，没有设置返回-1
+`127.0.0.1:6379>type key1` //查看key1的类型，例如list，hash等
+
+### 7. Redis 特性
+1. 可以有多个数据库。一个redis实例可以提供0-15号，总共16个数据库。 
+`127.0.0.1:6379>select 1` //可以选择连接1号数据库
+`127.0.0.1:6379>move myset 0` //前面选择了1数据库，将1号数据库中的myset移动到0数据库
+
+
+Redis 支持事务机制。所有的命令串行化，在执行命令时，不接受其他客户端的命令，从而所有命令原子化执行。支持的命令:
+`127.0.0.1:6379>multi` //开启事务 
+`127.0.0.1:6379>exec`  //提交
+`127.0.0.1:6379>discard` //回滚
+
+
+### 8. Redis 持久服务器 ### 8. Redis 持久化
+ Redis 数据存在内存。 持久化： 内存->硬盘
+ 持久化方式：
+ 1. RDB方式： 在指定的时间间隔内将内存数据快照写入到硬盘
+ 2. AOF方式： 在日志中记录数据库的每一个操作。
+ 3. 禁止持久化: 仅仅用作缓存
+ 4. 同时使用RDB和AOF
+ 
+#### RDB方式持久化
+优势：
+ - 备份，恢复
+ - 性能最大化
+ - 启动效率高
+
+缺点: 
+ - 定时持久化前的故障数据可能会丢失
+ - 子进程来来fork写入到硬盘，当数据量很大的时候，服务器压力很大。
+ 
+```
+/etc/redis/redis.conf
+save 900 1     //每900秒至少有1个可以发生变化，就写入到硬盘
+save 300 10
+save 60 10000
+dbfilename dump.rdb  //保存文件名
+dir ./               //路径
+```
+
+#### AOF方式持久化
+优势：
+ - 更高的数据安全性。
+ - 日志写入方式为append，故障时不影响前面的数据。开机后可以恢复数据
+ - 重写切换
+ - 日志文件记录所有的修改操作，可以用来完成数据重建。
+ 
+ 
+劣势：
+ - 相同数量的数据集，内容容量相对较大；
+ - 效率比较慢
+
+```
+/etc/redis/redis.conf
+appendonly no   => yes 时才可以使用AOF
+# appendfsync always  同步策略：总是同步
+appendfsync everysec  同步策略：每一秒配置
+# appendfsync no      同步策略：不同步
+```
+
+
+`127.0.0.1:6379>flushall` //清除数据库
+
+### 总结
+1. NoSql 
+2. Redis 安装使用
+3. Jedis 使用
+4. 常用数据类型，重点String，Hash
+5. 事务支持
+6. 持久化
+
  
  
  
- 
+
  
  
  
