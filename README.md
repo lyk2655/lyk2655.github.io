@@ -6,7 +6,7 @@ linyk3 个人主页
   - [ ] [example code](https://github.com/BruceEckel/TIJ4-code)
   - [x] [第一章_对象导论](./ThinkInJava/第一章_对象导论.md)
   - [x] [第二章_一切都是对象](./ThinkInJava/第二章_一切都是对象.md)
-  - [x] [第三章_操作符]./ThinkInJava/第三章_操作符.md)
+  - [x] [第三章_操作符](./ThinkInJava/第三章_操作符.md)
   - [x] [第四章_控制执行流程](./ThinkInJava/第四章_控制执行流程.md)
   - [x] [第五章_初始化与清理](./ThinkInJava/第五章_初始化与清理.md)
   - [x] [第六章_访问权限控制](./ThinkInJava/第六章_访问权限控制.md)
@@ -27,6 +27,7 @@ linyk3 个人主页
   - [x] [code](https://github.com/lyk2655/mySpringMVC.git)
   - [ ] [mySpringMVC搭建教程]
   
+- [ ] [Oracle执行计划学习笔记](./Oracle执行计划.md)
 ## TODO
 - [ ] 2018书籍
   - [ ] 《Java编程思想》
