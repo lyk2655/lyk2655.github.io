@@ -1,6 +1,3 @@
-linyk3 个人主页
-
-# 2018-04-01 ~ 2018-04-30
 ## Doing
 - [ ] [Java编程思想](./ThinkInJava/ThinkInJava.md) 
   - [ ] [example code](https://github.com/BruceEckel/TIJ4-code)
