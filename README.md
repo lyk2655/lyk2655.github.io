@@ -15,8 +15,9 @@
   - [x] [慕课网笔记:Redis入门](./Redis/Redis入门.md)
   - [ ] [源码阅读笔记]
   - [ ] [code](https://github.com/antirez/redis)
+  - [ ] [resdis-3.0-annotated](https://github.com/huangz1990/redis-3.0-annotated)
   - [ ] [如何阅读 Redis 源码](http://blog.huangz.me/diary/2014/how-to-read-redis-source-code.html)
-
+  - [ ] [Redis设计与实现](http://redisbook.com/)
 - [x] 班车应用后台
   - [x] [code](https://github.com/lyk2655/BusServer.git)
 
