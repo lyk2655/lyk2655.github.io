@@ -73,5 +73,9 @@ struct sdshdr {
 | sdscpy	    | 将给定的 C 字符串复制到 SDS 里面， 覆盖 SDS 原有的字符串。 | 	O(N) ， N 为被复制 C 字符串的长度。
 | sdsgrowzero	| 用空字符将 SDS 扩展至给定长度。	 | O(N) ， N 为扩展新增的字节数。
 | sdsrange	    | 保留 SDS 给定区间内的数据， 不在区间内的数据会被覆盖或清除。 | 	O(N) ， N 为被保留数据的字节数。
-| sdstrim	    | 接受一个 SDS 和一个 C 字符串作为参数， 从 SDS 左右两端分别移除所有在 C 字符串中出现过的字符。	 | O(M*N) ， M 为 SDS 的长度， N 为给定 C 字符串的长度。
+| sdstrim	    | 接受一个 SDS 和一个 C 字符串作为参数， 从 SDS 左右两端分别移除所有在 C 字符串中出现过的字符。	 | O(M*N) ， M 为 SDS 的长度， N 为给定 C 字符串的长度
 | sdscmp	    | 对比两个 SDS 字符串是否相同。 | 	O(N) ， N 为两个 SDS 中较短的那个 SDS 的长度。
+
+
+
+
