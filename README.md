@@ -9,11 +9,12 @@
   - [x] [第六章_访问权限控制](./ThinkInJava/第六章_访问权限控制.md)
   - [x] [第七章_复用类](./ThinkInJava/第七章_复用类.md)
   - [x] [第八章_多态](./ThinkInJava/第八章_多态.md)
+  - [x] [第九章_接口](./ThinkInJava/第九章_接口.md)
   - [ ] ...
   
 - [ ] Redis
   - [x] [慕课网笔记:Redis入门](./Redis/Redis入门.md)
-  - [ ] [源码阅读笔记]
+  - [ ] [源码阅读笔记](./Redis源码阅读笔记.md)
   - [ ] [code](https://github.com/antirez/redis)
   - [ ] [resdis-3.0-annotated](https://github.com/huangz1990/redis-3.0-annotated)
   - [ ] [如何阅读 Redis 源码](http://blog.huangz.me/diary/2014/how-to-read-redis-source-code.html)
