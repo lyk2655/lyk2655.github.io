@@ -14,7 +14,7 @@
   
 - [ ] Redis
   - [x] [慕课网笔记:Redis入门](./Redis/Redis入门.md)
-  - [ ] [源码阅读笔记](./Redis源码阅读笔记.md)
+  - [ ] [源码阅读笔记](./Redis/Redis源码阅读笔记.md)
   - [ ] [code](https://github.com/antirez/redis)
   - [ ] [resdis-3.0-annotated](https://github.com/huangz1990/redis-3.0-annotated)
   - [ ] [如何阅读 Redis 源码](http://blog.huangz.me/diary/2014/how-to-read-redis-source-code.html)
