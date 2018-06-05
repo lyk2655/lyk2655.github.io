@@ -10,6 +10,7 @@
   - [x] [第七章_复用类](./ThinkInJava/第七章_复用类.md)
   - [x] [第八章_多态](./ThinkInJava/第八章_多态.md)
   - [x] [第九章_接口](./ThinkInJava/第九章_接口.md)
+  - [x] [第十章_内部类](./ThinkInJava/第十章_内部类.md)
   - [ ] ...
   
 - [ ] Redis
@@ -27,6 +28,8 @@
   - [ ] [mySpringMVC搭建教程]
   
 - [ ] [Oracle执行计划学习笔记](./Oracle执行计划.md)
+
+- [ ] [Java回调机制解读](./notes/Java回调机制解读.md)
 ## TODO
 - [ ] 2018书籍
   - [ ] 《Java编程思想》
