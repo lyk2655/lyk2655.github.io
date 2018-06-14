@@ -1,17 +1,7 @@
 ## Doing
+- [ ] [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)    [本地链接](/home/linyk3/Downloads/tutorial/index.html) 
+- [ ] [Spring document](https://spring.io/projects/spring-framework)
 - [ ] [Java编程思想](./ThinkInJava/ThinkInJava.md) 
-  - [ ] [example code](https://github.com/BruceEckel/TIJ4-code)
-  - [x] [第一章_对象导论](./ThinkInJava/第一章_对象导论.md)
-  - [x] [第二章_一切都是对象](./ThinkInJava/第二章_一切都是对象.md)
-  - [x] [第三章_操作符](./ThinkInJava/第三章_操作符.md)
-  - [x] [第四章_控制执行流程](./ThinkInJava/第四章_控制执行流程.md)
-  - [x] [第五章_初始化与清理](./ThinkInJava/第五章_初始化与清理.md)
-  - [x] [第六章_访问权限控制](./ThinkInJava/第六章_访问权限控制.md)
-  - [x] [第七章_复用类](./ThinkInJava/第七章_复用类.md)
-  - [x] [第八章_多态](./ThinkInJava/第八章_多态.md)
-  - [x] [第九章_接口](./ThinkInJava/第九章_接口.md)
-  - [x] [第十章_内部类](./ThinkInJava/第十章_内部类.md)
-  - [ ] ...
   
 - [ ] Redis
   - [x] [慕课网笔记:Redis入门](./Redis/Redis入门.md)
