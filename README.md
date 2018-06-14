@@ -1,5 +1,5 @@
 ## Doing
-- [ ] [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)    [本地链接](/home/linyk3/Downloads/tutorial/index.html) 
+- [ ] [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
 - [ ] [Spring document](https://spring.io/projects/spring-framework)
 - [ ] [Java编程思想](./ThinkInJava/ThinkInJava.md) 
   
