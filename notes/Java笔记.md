@@ -20,3 +20,5 @@ public class AutoUnboxingTest {
         //所以上面的面试题中f1==f2的结果是true，而f3==f4的结果是false。
     }
 }
+
+[Java方向如何准备BAT技术面试答案(汇总版)](https://www.nowcoder.com/discuss/31667)
