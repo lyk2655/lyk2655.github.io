@@ -20,6 +20,8 @@
 - [ ] [Oracle执行计划学习笔记](./Oracle执行计划.md)
 
 - [ ] [Java回调机制解读](./notes/Java回调机制解读.md)
+
+- [ ] [华为机试-模块循环依赖Java实现笔记](./notes/华为机试-模块循环依赖Java实现.md)
 ## TODO
 - [ ] 2018书籍
   - [ ] 《Java编程思想》
