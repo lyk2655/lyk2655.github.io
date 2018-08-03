@@ -1,5 +1,6 @@
 ## Doing
 - [ ] [The Java™ Tutorials](https://docs.oracle.com/javase/tutorial/)
+- [ ] [Java 教程笔记，待续。。。](https://www.jianshu.com/p/390207099a65) 
 - [ ] [Spring document](https://spring.io/projects/spring-framework)
 - [ ] [Java编程思想](./ThinkInJava/ThinkInJava.md) 
   
