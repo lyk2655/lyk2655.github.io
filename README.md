@@ -5,7 +5,6 @@
   - [ ] [Java 教程官方文档翻译]()  未开始
 - [ ] [Effective Java 读书笔记]()  未开始 
 
-
 ## TODO
 - [ ] 2018书籍
   - [ ] 《Java编程思想》
@@ -49,6 +48,9 @@
 - [ ] [Java回调机制解读](./notes/Java回调机制解读.md)
 
 - [ ] [华为机试-模块循环依赖Java实现笔记](./notes/华为机试-模块循环依赖Java实现.md)
+
+- [ ] [Python SQLAlchemy 不确定条件查询](./notes/Python SQLAlchemy 不确定条件查询.html)
+
 
 - [ ] shenglong 主页
   - [x] 整合到spring boot blog 框架 
