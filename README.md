@@ -49,7 +49,9 @@
 
 - [ ] [华为机试-模块循环依赖Java实现笔记](./notes/华为机试-模块循环依赖Java实现.md)
 
-- [ ] [Python SQLAlchemy 不确定条件查询](./notes/Python SQLAlchemy 不确定条件查询.md)
+- [ ] [Python SQLAlchemy 不确定条件查询](./notes/Python-SQLAlchemy-不确定条件查询.md)
+
+- [ ] [Python SQLAlchemy 不确定条件查询](./notes/Python_string&datetime.md)
 
 
 - [ ] shenglong 主页
