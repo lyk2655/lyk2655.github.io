@@ -39,6 +39,8 @@
   - [ ] [如何阅读 Redis 源码](http://blog.huangz.me/diary/2014/how-to-read-redis-source-code.html)
   - [ ] [Redis设计与实现](http://redisbook.com/)
 
+### 学习笔记
+
 - [ ] mySpringMVC
   - [x] [code](https://github.com/lyk2655/mySpringMVC.git)
   - [ ] [mySpringMVC搭建教程]
