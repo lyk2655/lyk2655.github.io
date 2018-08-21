@@ -1,36 +1,36 @@
-[¼òÊé-Python SQLAlchemy ²»È·¶¨Ìõ¼ş²éÑ¯](https://www.jianshu.com/writer#/notebooks/5859805/notes/32445248)
-[github-Python SQLAlchemy ²»È·¶¨Ìõ¼ş²éÑ¯](https://lyk2655.github.io/notes/Python SQLAlchemy ²»È·¶¨Ìõ¼ş²éÑ¯.html)
+[ç®€ä¹¦-Python SQLAlchemy ä¸ç¡®å®šæ¡ä»¶æŸ¥è¯¢](https://www.jianshu.com/writer#/notebooks/5859805/notes/32445248)
+[github-Python SQLAlchemy ä¸ç¡®å®šæ¡ä»¶æŸ¥è¯¢](https://lyk2655.github.io/notes/Python SQLAlchemy ä¸ç¡®å®šæ¡ä»¶æŸ¥è¯¢.html)
 
 
-ÔÚÊ¹ÓÃPython²Ù×÷Êı¾İ¿âÊ±£¬¿ÉÒÔÊ¹ÓÃSQLAlchemy¿â£º
-SQLAlchemy ÊÇpython ²Ù×÷Êı¾İ¿âµÄÒ»¸ö¿â¡£ÄÜ¹»½øĞĞ orm Ó³Éä¹Ù·½ÎÄµµ?[sqlchemy](http://docs.sqlalchemy.org/en/rel_0_9/)
-SQLAlchemy¡°²ÉÓÃ¼òµ¥µÄPythonÓïÑÔ£¬Îª¸ßĞ§ºÍ¸ßĞÔÄÜµÄÊı¾İ¿â·ÃÎÊÉè¼Æ£¬ÊµÏÖÁËÍêÕûµÄÆóÒµ¼¶³Ö¾ÃÄ£ĞÍ¡±¡£SQLAlchemyµÄÀíÄîÊÇ£¬SQLÊı¾İ¿âµÄÁ¿¼¶ºÍĞÔÄÜÖØÒªÓÚ¶ÔÏó¼¯ºÏ£»¶ø¶ÔÏó¼¯ºÏµÄ³éÏóÓÖÖØÒªÓÚ±íºÍĞĞ
+åœ¨ä½¿ç”¨Pythonæ“ä½œæ•°æ®åº“æ—¶ï¼Œå¯ä»¥ä½¿ç”¨SQLAlchemyåº“ï¼š
+SQLAlchemy æ˜¯python æ“ä½œæ•°æ®åº“çš„ä¸€ä¸ªåº“ã€‚èƒ½å¤Ÿè¿›è¡Œ orm æ˜ å°„å®˜æ–¹æ–‡æ¡£?[sqlchemy](http://docs.sqlalchemy.org/en/rel_0_9/)
+SQLAlchemyâ€œé‡‡ç”¨ç®€å•çš„Pythonè¯­è¨€ï¼Œä¸ºé«˜æ•ˆå’Œé«˜æ€§èƒ½çš„æ•°æ®åº“è®¿é—®è®¾è®¡ï¼Œå®ç°äº†å®Œæ•´çš„ä¼ä¸šçº§æŒä¹…æ¨¡å‹â€ã€‚SQLAlchemyçš„ç†å¿µæ˜¯ï¼ŒSQLæ•°æ®åº“çš„é‡çº§å’Œæ€§èƒ½é‡è¦äºå¯¹è±¡é›†åˆï¼›è€Œå¯¹è±¡é›†åˆçš„æŠ½è±¡åˆé‡è¦äºè¡¨å’Œè¡Œ
 
-## °²×°ºÍ³õÊ¼»¯
-### pip°²×°ÃüÁî
+## å®‰è£…å’Œåˆå§‹åŒ–
+### pipå®‰è£…å‘½ä»¤
 `pip install sqlalchemy`
 
-¼ì²éÊÇ·ñ°²×°³É¹¦
+æ£€æŸ¥æ˜¯å¦å®‰è£…æˆåŠŸ
 ```python
 >>>import sqlalchemy
 >>>sqlalchemy.__version__
 '1.2.10'
 >>>                                                                                                               
 ```
-ÏÔÊ¾°æ±¾ºÅ1.2.10£¬ÕâÑù¾ÍËµÃ÷°²×°³É¹¦ÁË
+æ˜¾ç¤ºç‰ˆæœ¬å·1.2.10ï¼Œè¿™æ ·å°±è¯´æ˜å®‰è£…æˆåŠŸäº†
 
-### Ê¹ÓÃsqlalchemy¶ÔÊı¾İ¿â²Ù×÷
+### ä½¿ç”¨sqlalchemyå¯¹æ•°æ®åº“æ“ä½œ
 
-#### ¶¨ÒåÔªĞÅÏ¢£¬°ó¶¨µ½ÒıÇæ
+#### å®šä¹‰å…ƒä¿¡æ¯ï¼Œç»‘å®šåˆ°å¼•æ“
 ```
 >>> from sqlalchemy import *
 >>> from sqlalchemy.orm import *
->>> engine = create_engine('sqlalchemy.db', echo=True)  #¶¨ÒåÒıÇæ
->>> metadata = MetaData(engine) # °ó¶¨ÔªĞÅÏ¢
+>>> engine = create_engine('sqlalchemy.db', echo=True)  #å®šä¹‰å¼•æ“
+>>> metadata = MetaData(engine) # ç»‘å®šå…ƒä¿¡æ¯
 >>>
 ```
 
-#### ´´½¨±í
+#### åˆ›å»ºè¡¨
 ```
 >>> users_table = Table('users', metadata,
 ...     Column('id', Integer, primary_key=True),
@@ -42,12 +42,12 @@ SQLAlchemy¡°²ÉÓÃ¼òµ¥µÄPythonÓïÑÔ£¬Îª¸ßĞ§ºÍ¸ßĞÔÄÜµÄÊı¾İ¿â·ÃÎÊÉè¼Æ£¬ÊµÏÖÁËÍêÕûµÄÆó
 ```
 
 
-#### ²åÈëÊı¾İ
+#### æ’å…¥æ•°æ®
 ```
 >>>i = users_table.insert()
 >>>i.execute(name='linyk3', email='linyk2655@126.com')
 ```
-#### ½¨Á¢ORMÓ³Éä
+#### å»ºç«‹ORMæ˜ å°„
 ```
 class User(db.Model):
     __tablename__ = "user_table"
@@ -59,14 +59,14 @@ class User(db.Model):
         return '%s(%r, %r)' % (self.__class__.__name__, self.name, self.email)
 ```
 
-#### ½¨Á¢»á»°
+#### å»ºç«‹ä¼šè¯
 ```
 >>> session = create_session()
 >>> query = session.query(User)
 >>> u = query.filter_by(name='linyk3').first()
 ```
-Èç¹ûÓĞ¶à¸ö²éÑ¯Ìõ¼ş£¬²¢ÇÒ²éÑ¯Ìõ¼ş²»È·¶¨
-¿ÉÒÔÊ¹ÓÃÏÂÃæ²éÑ¯£º
+å¦‚æœæœ‰å¤šä¸ªæŸ¥è¯¢æ¡ä»¶ï¼Œå¹¶ä¸”æŸ¥è¯¢æ¡ä»¶ä¸ç¡®å®š
+å¯ä»¥ä½¿ç”¨ä¸‹é¢æŸ¥è¯¢ï¼š
 ```
 def get_user(id=None, name=None, email=None, page=None):
     q = self.session.query(User)
@@ -80,13 +80,13 @@ def get_user(id=None, name=None, email=None, page=None):
         q = q.limit(page * pageSize)
     return q.all()
 ```
-»¹¿ÉÒÔÊ¹ÓÃfilter_by,µ«ÊÇ²»Ö§³Ö±È½ÏÔËËã·û
+è¿˜å¯ä»¥ä½¿ç”¨filter_by,ä½†æ˜¯ä¸æ”¯æŒæ¯”è¾ƒè¿ç®—ç¬¦
 ```
 filters = {'name': 'linyk3', 'email': 'linyk2655@126.com'}
 User.query.filter_by(**filters).first()
 ```
 
-filter±Èfilter_byµÄ¹¦ÄÜ¸üÇ¿´ó£¬Ö§³Ö±È½ÏÔËËã·û£¬Ö§³Öor_¡¢in_µÈÓï·¨,Èç¹û±íÖĞÓĞÆäËû×Ö¶ÎĞèÒªÅĞ¶Ï£¬ÀıÈçÄêÁä£¬ÈÕÆÚµÈ
+filteræ¯”filter_byçš„åŠŸèƒ½æ›´å¼ºå¤§ï¼Œæ”¯æŒæ¯”è¾ƒè¿ç®—ç¬¦ï¼Œæ”¯æŒor_ã€in_ç­‰è¯­æ³•,å¦‚æœè¡¨ä¸­æœ‰å…¶ä»–å­—æ®µéœ€è¦åˆ¤æ–­ï¼Œä¾‹å¦‚å¹´é¾„ï¼Œæ—¥æœŸç­‰
 ```
 filters = {
      User.name == 'linyk3',
@@ -94,7 +94,7 @@ filters = {
 }
 User.query.filter(*filters).first()
 ```
-¾­¹ıÊÔÑé£¬²ÎÊıÖĞ dict {} ºÍ list [] ¶¼ÊÇ¿ÉÒÔµÄ¡£
+ç»è¿‡è¯•éªŒï¼Œå‚æ•°ä¸­ dict {} å’Œ list [] éƒ½æ˜¯å¯ä»¥çš„ã€‚
 ```
 filters = [
      User.name == 'linyk3',
@@ -102,7 +102,7 @@ filters = [
 User.query.filter(*filters).first()
 ```
 
-Èç¹û²éÑ¯Ìõ¼şÓĞ¶à¸ö£¬ÇÒ²»È·¶¨Ç°¶ËÊÇ·ñ´«¹ıÀ´£¬»òÕß´«¹ıÀ´µÄÖµÊÇ·ñÎª¿Õ£¬¿ÉÒÔ²ÉÓÃ²éÑ¯Ìõ¼şÆ´½ÓÀ´ÊµÏÖ£¬ÕâÊ±list.append()·½·¨¾ÍºÜÓĞÓÃ´¦ÁË,ÏîÄ¿Àı×Ó£º
+å¦‚æœæŸ¥è¯¢æ¡ä»¶æœ‰å¤šä¸ªï¼Œä¸”ä¸ç¡®å®šå‰ç«¯æ˜¯å¦ä¼ è¿‡æ¥ï¼Œæˆ–è€…ä¼ è¿‡æ¥çš„å€¼æ˜¯å¦ä¸ºç©ºï¼Œå¯ä»¥é‡‡ç”¨æŸ¥è¯¢æ¡ä»¶æ‹¼æ¥æ¥å®ç°ï¼Œè¿™æ—¶list.append()æ–¹æ³•å°±å¾ˆæœ‰ç”¨å¤„äº†,é¡¹ç›®ä¾‹å­ï¼š
 ```
 @admin.route("/query", methods=["GET"])
 @admin.route("/query/<int:page>", methods=["GET"])
@@ -110,7 +110,7 @@ def clock_query(page=None):
     if page is None:
         page = 1
     # app.logger.info(json.dumps(request.args))
-    # Æ´½Ó²éÑ¯Ìõ¼ş
+    # æ‹¼æ¥æŸ¥è¯¢æ¡ä»¶
     param = []
     if ('userId' in request.args) and (request.args['userId']):
         userId = request.args['userId']
@@ -131,14 +131,14 @@ def clock_query(page=None):
     page_data = LogInfo.query.filter(*param).paginate(page=page, per_page=20)
     return render_template("loginfo.html", page_data=page_data)
 ```
- ÕâÑùºóÌ¨ÄÜ½ÓÊÕµÄÇëÇó¾ÍºÜÁé»îÁË£º
+ è¿™æ ·åå°èƒ½æ¥æ”¶çš„è¯·æ±‚å°±å¾ˆçµæ´»äº†ï¼š
 ```
-# ËÄ¸ö²éÑ¯Ìõ¼ş¶¼ÓĞ
+# å››ä¸ªæŸ¥è¯¢æ¡ä»¶éƒ½æœ‰
 http://localhost:8080/admin/query?userId=linyk001&userName=linyk3&startDate=20180723&endDate=20180723
-# Ö»ÓĞÁ½¸ö²éÑ¯Ìõ¼ş
+# åªæœ‰ä¸¤ä¸ªæŸ¥è¯¢æ¡ä»¶
 http://localhost:8080/admin/query?userId=linyk001&userName=linyk3
-# ÓĞËÄ¸ö²éÑ¯Ìõ¼ş£¬µ«ÆäÖĞÁ½¸öÎªNone£¬ËùÒÔ²»Ó¦¸Ã×÷Îª²éÑ¯Ìõ¼ş
+# æœ‰å››ä¸ªæŸ¥è¯¢æ¡ä»¶ï¼Œä½†å…¶ä¸­ä¸¤ä¸ªä¸ºNoneï¼Œæ‰€ä»¥ä¸åº”è¯¥ä½œä¸ºæŸ¥è¯¢æ¡ä»¶
 http://localhost:8080/admin/query?userId=&userName=&startDate=20180723&endDate=20180723
 ```
 
-ÕâÑù¾Í·Ç³£Áé»îÁË£¬³õÑ§python£¬µ·¹ÄÁËÍ¦¾ÃµÄ²ÅÊµÏÖ£¬·¢ÏÖpython»¹ÊÇºÜ·½±ãµÄ£¬¼ÌĞøÅ¬Á¦£¡
+è¿™æ ·å°±éå¸¸çµæ´»äº†ï¼Œåˆå­¦pythonï¼Œæ£é¼“äº†æŒºä¹…çš„æ‰å®ç°ï¼Œå‘ç°pythonè¿˜æ˜¯å¾ˆæ–¹ä¾¿çš„ï¼Œç»§ç»­åŠªåŠ›ï¼
