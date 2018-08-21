@@ -1,6 +1,7 @@
 [简书-Python SQLAlchemy 不确定条件查询](https://www.jianshu.com/writer#/notebooks/5859805/notes/32445248)
 [github-Python SQLAlchemy 不确定条件查询](https://lyk2655.github.io/notes/Python SQLAlchemy 不确定条件查询.html)
 
+
 在使用Python操作数据库时，可以使用SQLAlchemy库：
 SQLAlchemy 是python 操作数据库的一个库。能够进行 orm 映射官方文档?[sqlchemy](http://docs.sqlalchemy.org/en/rel_0_9/)
 SQLAlchemy“采用简单的Python语言，为高效和高性能的数据库访问设计，实现了完整的企业级持久模型”。SQLAlchemy的理念是，SQL数据库的量级和性能重要于对象集合；而对象集合的抽象又重要于表和行
