@@ -51,7 +51,7 @@
 
 - [ ] [Python SQLAlchemy 不确定条件查询](./notes/Python-SQLAlchemy-不确定条件查询.md)
 
-- [ ] [Python SQLAlchemy 不确定条件查询](./notes/Python_string&datetime.md)
+- [ ] [Python string&datetime相互转化](./notes/Python_string&datetime.md)
 
 
 - [ ] shenglong 主页
